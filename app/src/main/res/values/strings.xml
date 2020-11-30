@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Personality Bucket</string>
+    <string name="me">Me, </string>
+    <string name="my_personality">My Personality</string>
+    <string name="my_bucket">My Bucket</string>
+    <string name="my_accomplishments">My Accomplishments</string>
+    <string name="my_traits">My Traits</string>
+    <string name="improvements_corner">Improvements Corner</string>
+    <string name="instructions">Instructions</string>
+</resources>
