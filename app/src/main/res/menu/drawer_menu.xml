@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_me"
+            android:icon="@drawable/ic_me"
+            android:title="My Personality" />
+        <item
+            android:id="@+id/nav_my_traits"
+            android:icon="@drawable/ic_my_traits"
+            android:title="My Traits" />
+        <item
+            android:id="@+id/nav_bucket"
+            android:icon="@drawable/ic_my_bucket"
+            android:title="My Bucket List" />
+        <item
+            android:id="@+id/nav_my_accomplishments"
+            android:icon="@drawable/ic_my_accomplishments"
+            android:title="My Accomplishments" />
+        <item
+            android:id="@+id/nav_my_improvements_corner"
+            android:icon="@drawable/ic_my_improvements_corner"
+            android:title="Improvements Corner" />
+        <item
+            android:id="@+id/nav_information"
+            android:icon="@drawable/ic_information"
+            android:title="Information" />
+    </group>
+
+</menu>

@@ -7,19 +7,28 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val saveBtn = findViewById<Button>(R.id.saveBtn)
+        val toolbar = findViewById(R.id.toolbar) as Toolbar?
+        setSupportActionBar(toolbar)
+        toolbar?.setTitle("Toolbar")
+        toolbar?.setSubtitle("Subtitle")
+        toolbar?.navigationIcon = ContextCompat.
+        getDrawable(this,R.drawable.ic_menu)
 
-        loadData()
+        val saveBtn = findViewById<Button>(R.id.saveBtn)
 
         saveBtn.setOnClickListener {
             saveData()
         }
+
+        loadData()
 
     }
 
@@ -42,6 +51,7 @@ class MainActivity : AppCompatActivity() {
             putString("PERSON_STORY", personStory)
         }.apply()
         Toast.makeText(this, "Data saved", Toast.LENGTH_SHORT).show()
+        loadData()
     }
 
     private fun loadData(){
