@@ -1,26 +1,44 @@
 package com.example.personalitybucket
 
 import android.content.Context
-import android.content.SharedPreferences
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContextCompat
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var toggle: ActionBarDrawerToggle
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val toolbar = findViewById(R.id.toolbar) as Toolbar?
-        setSupportActionBar(toolbar)
-        toolbar?.setTitle("Toolbar")
-        toolbar?.setSubtitle("Subtitle")
-        toolbar?.navigationIcon = ContextCompat.
-        getDrawable(this,R.drawable.ic_menu)
+        val drawerLayout = findViewById<DrawerLayout>(R.id.myDrawerLayout)
+        toggle = ActionBarDrawerToggle(this, drawerLayout,  R.string.open, R.string.close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val navView = findViewById<NavigationView>(R.id.navView)
+        navView.setNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.nav_me -> Toast.makeText(applicationContext, "Already on page \"My Personality\"", Toast.LENGTH_SHORT).show()
+                R.id.nav_my_traits -> this.startActivity(Intent(this, Traits::class.java))
+                R.id.nav_my_accomplishments -> Toast.makeText(applicationContext, "Clicked Accomplishments", Toast.LENGTH_SHORT).show()
+                R.id.nav_my_improvements_corner -> Toast.makeText(applicationContext, "Clicked Improvements Corner", Toast.LENGTH_SHORT).show()
+                R.id.nav_information -> Toast.makeText(applicationContext, "Clicked Information", Toast.LENGTH_SHORT).show()
+                R.id.nav_bucket -> Toast.makeText(applicationContext, "Clicked Bucket", Toast.LENGTH_SHORT).show()
+            }
+            true
+        }
 
         val saveBtn = findViewById<Button>(R.id.saveBtn)
 
@@ -30,6 +48,13 @@ class MainActivity : AppCompatActivity() {
 
         loadData()
 
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean{
+        if (toggle.onOptionsItemSelected(item)){
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun saveData(){
