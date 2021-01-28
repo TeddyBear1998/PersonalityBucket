@@ -1,4 +1,5 @@
 <resources>
+    <!-- Semi globals -->
     <string name="app_name">Personality Bucket</string>
     <string name="me">Me, </string>
     <string name="my_personality">My Personality</string>
@@ -10,12 +11,24 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="title_activity_traits">Traits</string>
+    <string name="user_full_name">[Name, Surname]</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <!-- Main Activity strings -->
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="main_weight_hint">85 kg</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="height_cm">Height {cm}</string>
+    <string name="name">Name</string>
+    <string name="save">Save</string>
+    <string name="my_story">My Story</string>
+    <string name="surname">Surname</string>
+    <string name="weight_kg">Weight {kg}</string>
+    <string name="this_is_me">This is me!</string>
+    <string name="height">185 cm</string>
 </resources>

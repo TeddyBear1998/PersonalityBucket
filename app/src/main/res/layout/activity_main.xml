@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:gravity="center"
-                android:text="[Name, Surname]"
+                android:text="@string/user_full_name"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -42,11 +42,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:ems="10"
-                android:hint="85 kg"
+                android:hint="@string/main_weight_hint"
                 android:inputType="number"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PersonHeight" />
+                app:layout_constraintTop_toBottomOf="@+id/PersonHeight"
+                android:autofillHints="" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -66,7 +67,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="23dp"
-                android:text="Date of Birth"
+                android:text="@string/date_of_birth"
                 app:layout_constraintEnd_toStartOf="@+id/PersonDoB"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/PersonDoB" />
@@ -78,7 +79,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="27dp"
-                android:text="Height {cm}"
+                android:text="@string/height_cm"
                 app:layout_constraintEnd_toStartOf="@+id/PersonHeight"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/PersonHeight" />
@@ -90,7 +91,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="40dp"
-                android:text="Name"
+                android:text="@string/name"
                 app:layout_constraintEnd_toStartOf="@+id/PersonName"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/PersonName" />
@@ -101,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="Save"
+                android:text="@string/save"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -113,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="20dp"
-                android:text="My Story"
+                android:text="@string/my_story"
                 app:layout_constraintEnd_toStartOf="@+id/PersonStory"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/PersonStory" />
@@ -124,11 +125,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:ems="10"
-                android:hint="Name"
+                android:hint="@string/name"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                android:autofillHints="" />
 
             <EditText
                 android:id="@+id/PersonSurname"
@@ -136,11 +138,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:ems="10"
-                android:hint="Surname"
+                android:hint="@string/surname"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PersonName" />
+                app:layout_constraintTop_toBottomOf="@+id/PersonName"
+                android:autofillHints="" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -149,7 +152,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="21dp"
-                android:text="Surname"
+                android:text="@string/surname"
                 app:layout_constraintEnd_toStartOf="@+id/PersonSurname"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/PersonSurname" />
@@ -161,7 +164,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="12dp"
-                android:text="Weight {kg}"
+                android:text="@string/weight_kg"
                 app:layout_constraintEnd_toStartOf="@+id/PersonWeight"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/PersonWeight" />
@@ -173,12 +176,13 @@
                 android:layout_marginTop="16dp"
                 android:ems="10"
                 android:gravity="start|top"
-                android:hint="This is me!"
+                android:hint="@string/this_is_me"
                 android:inputType="textMultiLine"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_max="200dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PersonWeight" />
+                app:layout_constraintTop_toBottomOf="@+id/PersonWeight"
+                android:autofillHints="" />
 
             <EditText
                 android:id="@+id/PersonHeight"
@@ -186,11 +190,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:ems="10"
-                android:hint="185 cm"
+                android:hint="@string/height"
                 android:inputType="number"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PersonDoB" />
+                app:layout_constraintTop_toBottomOf="@+id/PersonDoB"
+                android:autofillHints="" />
 
             <EditText
                 android:id="@+id/PersonDoB"
@@ -198,11 +203,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:ems="10"
-                android:hint="dd/mm/yyyy"
+                android:hint="@string/date_of_birth"
                 android:inputType="date"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PersonSurname" />
+                app:layout_constraintTop_toBottomOf="@+id/PersonSurname"
+                android:autofillHints="" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
