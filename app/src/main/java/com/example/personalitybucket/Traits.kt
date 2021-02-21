@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
@@ -18,7 +19,7 @@ class Traits : AppCompatActivity() {
         setContentView(R.layout.activity_traits)
 
         val drawerLayout = findViewById<DrawerLayout>(R.id.myDrawerLayout)
-        toggle = ActionBarDrawerToggle(this, drawerLayout,  R.string.open, R.string.close)
+        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
@@ -26,21 +27,46 @@ class Traits : AppCompatActivity() {
 
         val navView = findViewById<NavigationView>(R.id.navViewTraits)
         navView.setNavigationItemSelectedListener {
-            when(it.itemId){
+            when (it.itemId) {
                 R.id.nav_me -> this.startActivity(Intent(this, MainActivity::class.java))
-                R.id.nav_my_traits -> Toast.makeText(applicationContext, "Already on page \"Traits\"", Toast.LENGTH_SHORT).show()
-                R.id.nav_my_accomplishments -> Toast.makeText(applicationContext, "Clicked Accomplishments", Toast.LENGTH_SHORT).show()
-                R.id.nav_my_improvements_corner -> Toast.makeText(applicationContext, "Clicked Improvements Corner", Toast.LENGTH_SHORT).show()
-                R.id.nav_information -> Toast.makeText(applicationContext, "Clicked Information", Toast.LENGTH_SHORT).show()
-                R.id.nav_bucket -> Toast.makeText(applicationContext, "Clicked Bucket", Toast.LENGTH_SHORT).show()
+                R.id.nav_my_traits -> Toast.makeText(
+                    applicationContext,
+                    "Already on page \"Traits\"",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_my_accomplishments -> Toast.makeText(
+                    applicationContext,
+                    "Clicked Accomplishments",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_my_improvements_corner -> Toast.makeText(
+                    applicationContext,
+                    "Clicked Improvements Corner",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_information -> Toast.makeText(
+                    applicationContext,
+                    "Clicked Information",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_bucket -> Toast.makeText(
+                    applicationContext,
+                    "Clicked Bucket",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
             true
         }
 
+        val addTrait = findViewById<Button>(R.id.add_trait_button)
+        addTrait.setOnClickListener {
+            Toast.makeText(this@Traits, "Add trait button click", Toast.LENGTH_SHORT).show()
+        }
+
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean{
-        if (toggle.onOptionsItemSelected(item)){
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (toggle.onOptionsItemSelected(item)) {
             return true
         }
         return super.onOptionsItemSelected(item)

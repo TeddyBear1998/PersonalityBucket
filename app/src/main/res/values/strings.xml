@@ -31,4 +31,5 @@
     <string name="weight_kg">Weight {kg}</string>
     <string name="this_is_me">This is me!</string>
     <string name="height">185 cm</string>
+    <string name="AddTrait">Add</string>
 </resources>
